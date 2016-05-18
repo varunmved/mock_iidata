@@ -1,0 +1,34 @@
+Mock Competition Questions
+
+1. (Easy) What are the frequencies of kinds of recorded injuries? How about deaths? Do they correspond?
+2. (Easy) What years has the most injuries? What year has the most deaths? 
+
+3. (Easy) Which year witnessed the accident causing the most injuries? What kind of injury it is? 
+
+4. (Medium) What are the most dangerous streets or avenues? 
+
+5. (Medium) How does the ratio of injuries change with years? How about deaths? Do you find any pattern? (plot three kinds of injuries/fatalities in one graph) 
+
+6. (Hard) The number of injuries in 2014 is missing. Based on the given data (injuries and fatalities), predict the total number of three kinds of injuries separately. Showing your reasons why this might be correct. 
+
+7. (Bonus question) Look at your plot (Using nodeX and nodeY). Which city do you think the data come from? Do you have any suggestions for the mayor of that city? 
+
+Scripts:
+    1. Fatalities:
+            SELECT COUNT(PedFatalit) as pf, COUNT(BikeFatali) as bf, COUNT(MVOFatalit) as mvof FROM fatality_yearly;
+            1. "1498"   "1498"  "1498"
+       Injuries:
+           SELECT  COUNT(Injuries) as tot_injur,COUNT(PedInjurie) as p, COUNT(BikeInjuri) as bi, COUNT(MVOInjurie) as mvof FROM injury_yearly;
+            1. "106930" "106930"    "106930"    "106930"
+            
+    2. Max injury:
+            SELECT SUM(Injuries), YR FROM injury_yearly group by(YR) order by Injuries DESC;
+            45323, 2011
+       Max fatal:
+            SELECT SUM(Fatalities), YR FROM fatality_yearly group by(YR) order by Fatalities DESC;
+            "206"   "2014"
+    
+    3. 
+
+
+    4.

@@ -1,0 +1,4 @@
+ Select injury_yearly.STREET1, injury.yearly.STREET2, fatality_yearly.STREET1, fatality_yearly.STREET2, injury_yearly.injuries, fatatlity_yearly.Fatalities, injuries_yearly.Injuries 
+    FROM Table
+    INNER JOIN fatality_yearly
+          ON injury_yearly.STREET1 = fatality_yearly.STREET1 OR injury_yearly.STREET2 = fatality_yearly.STREET2;
